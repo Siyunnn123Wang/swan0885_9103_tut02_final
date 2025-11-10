@@ -1,4 +1,3 @@
-// Define two circle configurations: [x position, y position, diameter]
 let circles = [
   [200, 200, 200],  // First circle: position (200, 200), diameter 200
   [200, 500, 230],  // Second circle: position (200, 500), diameter 230
@@ -6,13 +5,13 @@ let circles = [
 
 function setup() {
   createCanvas(windowWidth, windowHeight); // Create a canvas that fits the window size
-  noLoop(); // Draw only once (no continuous looping)
+  noLoop(); 
 }
 
 function draw() {
   background(255); // Set background color to white
-  drawCircle1(circles[0][0], circles[0][1], circles[0][2]); // Draw the first decorative circle
-  drawCircle2(circles[1][0], circles[1][1], circles[1][2]); // Draw the second decorative circle
+  drawCircle1(circles[0][0], circles[0][1], circles[0][2]); 
+  drawCircle2(circles[1][0], circles[1][1], circles[1][2]); 
 }
 
 //---------------------------//
@@ -37,7 +36,7 @@ function drawCircle1(x, y, s) {
     rotate(PI / 3); // Rotate 60° for each petal
     fill("#f1801b");
 
-    // Petal shape defined by smooth curve vertices
+    // Petal shape defined by curveVertices
     // reference:https://p5js.org/reference/p5/curveVertex/
     beginShape();
     curveVertex(0, -0.05 * s);
